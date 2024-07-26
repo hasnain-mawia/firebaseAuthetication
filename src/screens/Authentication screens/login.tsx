@@ -64,8 +64,8 @@ function Login() {
     <div className='bg-gradient-to-r from-cyan-500 to-blue-500 h-screen'>
         <div className='flex justify-center items-center h-screen'>
       <div className='w-[400px] bg-white shadow-2xl rounded-2xl px-3 py-10'>
-           <h2 className='text-[30px] font-semibold text-center'>Login</h2> 
-           <form onSubmit={submitdata} className='flex flex-col gap-5' action="">
+           <h2 className='text-[30px] font-semibold text-center dark:text-[black]'>Login</h2> 
+           <form onSubmit={submitdata} className='flex flex-col gap-5 dark:text-[black]' action="">
             <div>
             <label htmlFor="">Email</label>
             <input onChange={(e:any)=> setvalues({...values,email:e.target.value})} value={values.email} type="text" name='email' placeholder='Enter your Email' className={`border-[1px] border-[#3786F4] focus:outline-none ${errors.email && 'border-[1px] border-[red]' } bg-[#ffffff] p-2 rounded-md w-full`}/>

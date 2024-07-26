@@ -79,10 +79,10 @@ function Upload() {
     <div className='max-w-[1300px] mx-auto my-5'> 
         <button onClick={()=> navigate(-1)} className='bg-[#0088ff] p-2 rounded-[30px] text-white' >BACK</button>
     </div>
-    <div className='max-w-[1300px] mx-auto my-5 bg-[#ededed] p-10 rounded-xl'>
-      <h2 className='text-[27px] font-semibold mb-2'>Add Product</h2>
+    <div className='max-w-[1300px] mx-auto my-5 bg-[#ededed] dark:bg-[#c9c8c8] p-10 rounded-xl'>
+      <h2 className='text-[27px] font-semibold mb-2 dark:text-[black]'>Add Product</h2>
             <div className='mt-2 max-w-[1200px] mx-auto'>
-            <form onSubmit={handleSubmit} className='flex flex-col m-3 sm:m-0 text-[16px]' action="">
+            <form onSubmit={handleSubmit} className='flex flex-col m-3 sm:m-0 text-[16px] dark:text-[black]' action="">
             <label>Title</label>
             <input onChange={(e:any)=> setvalues({...values,title:e.target.value})} value={values.title} id='Title' className=
             {`${errors.title && 'border-[1px] border-[red]' } bg-[#ffffff] p-2 rounded-md w-full`} type="text" />

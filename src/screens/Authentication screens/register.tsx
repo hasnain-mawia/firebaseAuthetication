@@ -72,8 +72,8 @@ function Register() {
     <div className='bg-gradient-to-r from-cyan-500 to-blue-500 h-screen'>
         <div className='flex justify-center items-center h-screen'>
       <div className='w-[400px] bg-white shadow-2xl rounded-2xl px-3 py-10'>
-           <h2 className='text-[30px] font-semibold text-center'>Register</h2> 
-           <form onSubmit={submitdata} className='flex flex-col gap-2' action="">
+           <h2 className='text-[30px] font-semibold text-center dark:text-[black]'>Register</h2> 
+           <form onSubmit={submitdata} className='flex flex-col gap-2 dark:text-[black]' action="">
             <div>
             <label htmlFor="">Fullname</label>
             <input onChange={(e:any)=> setvalues({...values,fullname:e.target.value})} value={values.fullname} type="text" name='email' placeholder='Enter your Email' className={`${errors.fullname && 'border-[1px] border-[red]' } bg-[#ffffff] p-2 rounded-md w-full border-[1px] border-[#3786F4]`}/>

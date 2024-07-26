@@ -5,7 +5,6 @@ import CLoader from '../../components/CLoader';
 import { Getdata } from '../../config/firebase';
 
 function Index() {
-  const navigate = useNavigate();
   const [products, setProducts] = useState<any>([]);
   const getfirebasedata = async() =>{
    await Getdata('products').then((res)=>{
@@ -28,12 +27,12 @@ function Index() {
         {products.length === 0 ? <CLoader /> : 
           products.map((product:any, i:number) => {
           return(
-            <Link key={i} to={`/detail/${product.title.replace()}`} state={product}>
+            <Link key={i} to={`/detail/${product.title.trim()}`} state={product}>
             <div  className='shadow-2xl rounded-[10px] border-2 border-[#c9c9c9] flex flex-col items-center justify-center text-center'>
           <img src={product.image} alt={product.title} className='overflow-hidden rounded-[10px]'/>
-          <div className='py-3 px-2'>
-            <h2 className='font-bold'>{product.title.slice(0,25)}</h2>
-            <p className='text-[green]'>${product.price}</p>
+          <div className='py-3 px-2 w-full'>
+            <h2 className='font-bold my-1'>{product.title.slice(0,25)}</h2>
+            <p className='text-[green] dark:bg-[white] w-full rounded-[30px] text-[20px] font-semibold'>${product.price}</p>
             </div>
           </div>
           </Link>
